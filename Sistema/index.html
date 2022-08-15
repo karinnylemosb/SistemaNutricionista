@@ -2,24 +2,82 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Aparecida Nutrição</title>
+		<title>Karinny Lemos Nutricionista</title>
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-
-
+		<link rel="stylesheet" type="text/css" href="./style//css/reset.css">
+		<link rel="stylesheet" type="text/css" href="./style//css/index.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
 	</head>
 	<body>
 
 		<header>
-			<div class="container">
-				<h1>Karinny Lemos Nutricionista</h1>
+		<!-- Barra de menu -->
+			<nav class="navbar navbar-expand-lg bg-light">
+				<div class="container-fluid">
+				  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="box-itens">
+						<li class="nav-item"><img id="logo" src="./img/eu.jpg" href="#"></img></li>
+						<li  class="nav-item" id="text">
+							<a class="nav-link active" aria-current="page" href="#">Meus pacientes </a>
+						</li>
+						<li class="nav-item" id="text">
+							<a class="nav-link" href="#">Contato</a>
+						</li>
+					</ul>
+					<form class="d-flex" role="search">
+					  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					  <button type="button" class="btn btn-outline-primary">Busca</button>
+					</form>
+				  </div>
+				</div>
+			  </nav>
+		<!-- <-  Carrossel de imagens--> 
+		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+			<!-- Botões do carrossél -->
+				<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+			<!-- Imagens e texto do carrossél -->
+				<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="10000">
+					<img src="./img/saudaveis.jpg" class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+					<h5>O sucesso é a soma de pequenos esforços repetidos dia após dia.</h5>
+					<p>Robert Collier</p>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="./img/saudavel.jpg" class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>O sucesso é a soma de pequenos esforços repetidos dia após dia.</h5>
+						<p>Robert Collier</p>
+					</div>
+				</div>
+			 
 			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+
+		  </div>
+		  </div>
+
 		</header>
+
 		<main>
-			<section class="container">
-				<h2>Meus pacientes</h2>
+
+				<section class="container1">
+				<h2 class="titulo">Meus pacientes</h2>
 				<table>
 					<thead>
 						<tr>
@@ -73,35 +131,37 @@
 				</table>
 
 			</section>
-		</main>
-		<!-- Form Adicionar novo paciente-->
-<section class="container">
-    <h2 id="titulo-form">Adicionar novo paciente</h2>
-	<ul id="mensagem-erro">
-	
-	</ul>
-    <form id="form-adiciona">
-        <div class="grupo">
-            <label for="nome">Nome:</label>
-            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
-        </div>
-        <div class="grupo">
-            <label for="peso">Peso:</label>
-            <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
-        </div>
-        <div class="grupo">
-            <label for="altura">Altura:</label>
-            <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
-        </div>
-        <div class="grupo">
-            <label for="gordura">% de Gordura:</label>
-            <input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
-        </div>
+		
+<!-- Form Adicionar novo paciente-->
+			<section class="container2">
+				<h2 class="titulo">Adicionar novo paciente</h2>
+				<ul id="mensagem-erro">
+				
+				</ul>
+				<form id="form-adiciona">
+					<div class="grupo">
+						<label for="nome">Nome:</label>
+						<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
+					</div>
+					<div class="grupo">
+						<label for="peso">Peso:</label>
+						<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+					</div>
+					<div class="grupo">
+						<label for="altura">Altura:</label>
+						<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+					</div>
+					<div class="grupo">
+						<label for="gordura">% de Gordura:</label>
+						<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+					</div>
 
-        <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
-    </form>
-</section>
-		<script src="js/calcula-imc.js"></script>
-		<script src="js/form.js"></script>
+					<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+				</form>
+			</section>
+				<script src="js/calcula-imc.js"></script>
+				<script src="js/form.js"></script>
+				<script src="js/remover-paciente.js"></script>
+		</main>
 	</body>
 </html>

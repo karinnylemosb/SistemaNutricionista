@@ -1,6 +1,5 @@
 //Alterando o título da Aparecida
-var titulo = document.querySelector(".container");
-titulo.textContent = "Karinny Lemos Nutricionista";
+var titulo = document.querySelector(".container1");
 
 //pegando todas as classes .paciente
 var pacientes = document.querySelectorAll(".paciente"); 
