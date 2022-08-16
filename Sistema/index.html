@@ -6,6 +6,9 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="./style//css/reset.css">
 		<link rel="stylesheet" type="text/css" href="./style//css/index.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -21,6 +24,7 @@
 					<span class="navbar-toggler-icon"></span>
 				  </button>
 
+
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="box-itens">
 						<li class="nav-item"><img id="logo" src="./img/eu.jpg" href="#"></img></li>
@@ -28,13 +32,10 @@
 							<a class="nav-link active" aria-current="page" href="#">Meus pacientes </a>
 						</li>
 						<li class="nav-item" id="text">
-							<a class="nav-link" href="#">Contato</a>
+							<a class="nav-link active" href="#">Contato</a>
 						</li>
 					</ul>
-					<form class="d-flex" role="search">
-					  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					  <button type="button" class="btn btn-outline-primary">Busca</button>
-					</form>
+
 				  </div>
 				</div>
 			  </nav>
@@ -78,6 +79,11 @@
 
 				<section class="container1">
 				<h2 class="titulo">Meus pacientes</h2>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" value="" id="filtrar-tabela"type="text" placeholder="Digite o nome do paciente" aria-label="Search">
+					<button type="button" class="btn btn-outline-primary">Busca</button>
+				  </form>
+				  <br></br>
 				<table>
 					<thead>
 						<tr>
@@ -134,34 +140,39 @@
 		
 <!-- Form Adicionar novo paciente-->
 			<section class="container2">
-				<h2 class="titulo">Adicionar novo paciente</h2>
-				<ul id="mensagem-erro">
-				
-				</ul>
-				<form id="form-adiciona">
-					<div class="grupo">
-						<label for="nome">Nome:</label>
-						<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
-					</div>
-					<div class="grupo">
-						<label for="peso">Peso:</label>
-						<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
-					</div>
-					<div class="grupo">
-						<label for="altura">Altura:</label>
-						<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
-					</div>
-					<div class="grupo">
-						<label for="gordura">% de Gordura:</label>
-						<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
-					</div>
+				<div id="conteudo-container2">
+					<h2 class="titulo">Adicionar novo paciente</h2>
+					<ul id="mensagem-erro">
+					
+					</ul>
+					<form id="form-adiciona">
+						<div class="grupo">
+							<label for="nome">Nome:</label>
+							<input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
+						</div>
+						<div class="grupo">
+							<label for="peso">Peso:</label>
+							<input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+						</div>
+						<div class="grupo">
+							<label for="altura">Altura:</label>
+							<input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+						</div>
+						<div class="grupo">
+							<label for="gordura">% de Gordura:</label>
+							<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+						</div>
 
-					<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+						<hr>
+
+						<button id="adicionar-paciente" class="btn btn-outline-primary">Adicionar</button>
+				</div>
 				</form>
 			</section>
 				<script src="js/calcula-imc.js"></script>
 				<script src="js/form.js"></script>
 				<script src="js/remover-paciente.js"></script>
+				<script src="js/filtra.js"></script>
 		</main>
 	</body>
 </html>

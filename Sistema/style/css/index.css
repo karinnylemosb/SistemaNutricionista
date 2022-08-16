@@ -10,8 +10,6 @@ body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	
-
-	
 }
 
 main{
@@ -35,6 +33,10 @@ main{
 	
 }
 
+.nav-link{
+	font-family: 'League Spartan', sans-serif;
+	font-size: 18px !important;
+}
 
 header h1{
 	font-size: 2em;
@@ -59,10 +61,22 @@ header .container:before{
 }
 
 .container1, .container2{
-	padding-top: 6em;
+	padding-top: 2em;
 	width: 60%;
 	height: 100%;
-	margin: 0 auto;
+	margin: auto;
+}
+
+.container2 {
+	background-color: rgb(218, 216, 216);
+	width: 100%;
+	padding: 3em 13em;
+	margin-top: 2em;
+	
+}
+
+#conteudo-container2{
+	margin-left: 1em;
 }
 
 section{
@@ -174,4 +188,7 @@ button[disabled=disabled], button:disabled {
 .fadeOut{
 	opacity: 0;
 	transition: 0.5s;
+}
+.invisivel {
+	display: none;
 }
