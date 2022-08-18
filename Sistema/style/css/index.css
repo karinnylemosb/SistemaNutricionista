@@ -14,6 +14,7 @@ body{
 
 main{
 	background-color:#F8F9FA;
+	padding-bottom: 3em;
 }
 
 
@@ -191,4 +192,8 @@ button[disabled=disabled], button:disabled {
 }
 .invisivel {
 	display: none;
+}
+
+#meu-container{
+	display:none;
 }

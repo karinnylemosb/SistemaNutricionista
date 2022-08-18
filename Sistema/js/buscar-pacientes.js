@@ -1,4 +1,6 @@
-var botaoAdicionar = document.querySelector("#buscar-pacientes");
+// Técnica AJAX, fazer requisição assíncrona (sem travar o JS);
+
+var botaoAdicionar = document.querySelector("#importar-pacientes");
 
 botaoAdicionar.addEventListener("click", function(){
 
