@@ -1,31 +1,35 @@
-// Botão adicionar:
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
-
-// Efeitos do botão:
 botaoAdicionar.addEventListener("click", function(event){
-
     event.preventDefault(); // Evita o recarregamento automático
 
     var form = document.querySelector("#form-adiciona");
+    // Extraindo informacoes do paciente do form
     var paciente = obtemPacienteDoFormulario(form);
-    
-    // Mensagens de erros:
+    // Cria a tr e a td do paciente
+    var pacienteTr = montaTr(paciente);
+
+
     var erros = validaPaciente(paciente);
     console.log(erros);
     if(erros.length > 0){
     exibeMensagensDeErro(erros);
     return;
-    }
+}
 
-    adicionaPacienteNaTabela(paciente);
-
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
     form.reset();
     var mensagemErro = document.querySelector("#mensagem-erro");
     mensagemErro.innerHTML = ""
 
-});
+})
 
-// Exibindo mensagens de erro:
+function adicionaPacienteNaTabela(paciente) {
+    var pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
+}
+
 function exibeMensagensDeErro(erros){
     var ul = document.querySelector("#mensagem-erro");
     // Zera e não aparecer várias mensagens anteriores:
@@ -38,30 +42,17 @@ function exibeMensagensDeErro(erros){
     });
 }
 
-
-// Obtendo paciente do formulário:
 function obtemPacienteDoFormulario (form) {
 var paciente = {
     nome: form.nome.value, //vem do 'name' no html
     peso: form.peso.value,
     altura: form.altura.value,
     gordura: form.gordura.value,
-    imc: calculaImc(form.peso.value,form.altura.value),
-    imagem: imagemRemover(),
- 
-    
+    imc: calculaImc(form.peso.value,form.altura.value)
 }
 return paciente; 
 }
 
-// Adicionando ele na tabela: 
-function adicionaPacienteNaTabela (paciente) {
-    var pacienteTr = montaTr(paciente);
-    var tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
-}
-
-// Montando a linha: 
 function montaTr (paciente){
 var pacienteTr = document.createElement("tr");
 pacienteTr.classList.add("paciente"); //Deixando com a class igual aos de origem
@@ -71,12 +62,12 @@ pacienteTr.appendChild(montaTd(paciente.peso, "info-peso"));
 pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
 pacienteTr.appendChild(montaTd(paciente.gordura, "info-gordura"));
 pacienteTr.appendChild(montaTd(paciente.imc, "info-imc"));
-pacienteTr.appendChild (montaTd(paciente,imagem, "imagem-excluir"))
+pacienteTr.appendChild(montaTdLixeira("imagem-excluir"));
 
 return pacienteTr;
+
 }
 
-// Montando as células:
 function montaTd (dado,classe){
     var td = document.createElement ("td"); //Criando a td
     td.textContent = dado; //Dizendo o q tem dentro. Dado é o peso, altura, gord..
@@ -85,7 +76,15 @@ function montaTd (dado,classe){
     return td;
 }
 
-// Validando Paciente: Percorrendo arrays de mensagens de erro:
+function montaTdLixeira (classe){
+    var td = document.createElement ("td"); //Criando a td
+    td.innerHTML = '<img src ="./img/excluir.png" width="18px">'; 
+    td.classList.add(classe);
+
+    return td;
+}
+
+// Percorrendo arrays de mensagens de erro:
 function validaPaciente(paciente){
 
     var erros = [];
@@ -115,16 +114,3 @@ function validaPaciente(paciente){
     }
     return erros;
 }
-
-function imagemRemover(){
-    imagem = document.createElement("img");
-    imagem.src ="../img/excluir.png";
-    imagem.width = 10;
-    imagem.alt ="clique para remover paciente"
-  
-    return imagem;
-}
-
-console.log(imagemRemover);
-
-

@@ -9,6 +9,7 @@ botaoAdicionar.addEventListener("click", function(){
     xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
     // Ouvindo a Resposta da requisição para quando ela tiver disponível e exibindo sua resposta em texto:
     xhr.addEventListener("load",function(){
+        
         var resposta = xhr.responseText;
         var pacientes = JSON.parse (resposta);
         

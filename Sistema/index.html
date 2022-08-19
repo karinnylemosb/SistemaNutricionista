@@ -29,10 +29,13 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="box-itens">
 						<li class="nav-item"><img id="logo" src="./img/eu.jpg" href="#"></img></li>
 						<li  class="nav-item" id="text">
-							<a class="nav-link active" aria-current="page" href="#">Meus pacientes </a>
+							<a class="nav-link active" aria-current="page" href="#container1">Meus pacientes </a>
 						</li>
 						<li class="nav-item" id="text">
-							<a class="nav-link active" href="#">Contato</a>
+							<a class="nav-link active" href="#meu-container">Adicionar pacientes</a>
+						</li>
+						<li class="nav-item" id="text">
+							<a class="nav-link active" href="#footer">Contato</a>
 						</li>
 					</ul>
 
@@ -77,7 +80,7 @@
 
 		<main>
 
-				<section class="container1">
+				<section class="container1" id="container1">
 				<h2 class="titulo">Meus pacientes</h2>
 				<form class="d-flex" role="search">
 					<input class="form-control me-2" value="" id="filtrar-tabela"type="text" placeholder="Digite o nome do paciente" aria-label="Search">
@@ -102,7 +105,7 @@
 							<td class="info-altura">2.00</td>
 							<td class="info-gordura">10</td>
 							<td class="info-imc"></td>
-							<td class="imagem-excluir"> <img src ="./img/excluir.png" width="18px"> </td>
+							<td class="imagem-excluir" id="btn-lixeira"> <a><img src ="./img/excluir.png" width="18px"></a> </td>
 						</tr>
 
 						<tr class="paciente" >
@@ -111,7 +114,7 @@
 							<td class="info-altura">1.72</td>
 							<td class="info-gordura">40</td>
 							<td class="info-imc"></td>
-							<td class="imagem-excluir"> <img src ="./img/excluir.png" width="18px"> </td>
+							<td class="imagem-excluir" id="btn-lixeira"> <a><img src ="./img/excluir.png" width="18px"></a> </td>
 						</tr>
 
 						<tr class="paciente" >
@@ -120,7 +123,7 @@
 							<td class="info-altura">1.64</td>
 							<td class="info-gordura">14</td>
 							<td class="info-imc"></td>
-							<td class="imagem-excluir"> <img src ="./img/excluir.png" width="18px"> </td>
+							<td class="imagem-excluir" id="btn-lixeira"> <a><img src ="./img/excluir.png" width="18px"></a> </td>
 						</tr>
 
 						<tr class="paciente">
@@ -129,7 +132,7 @@
 							<td class="info-altura">1.73</td>
 							<td class="info-gordura">24</td>
 							<td class="info-imc"></td>
-							<td class="imagem-excluir"> <img src ="./img/excluir.png" width="18px"> </td>
+							<td class="imagem-excluir" id="btn-lixeira"> <a><img src ="./img/excluir.png" width="18px"></a> </td>
 						</tr>
 						<tr class="paciente" >
 							<td class="info-nome">Tatiana</td>
@@ -137,12 +140,12 @@
 							<td class="info-altura">1.55</td>
 							<td class="info-gordura">19</td>
 							<td class="info-imc"></td>
-							<td class="imagem-excluir"> <img src ="./img/excluir.png" width="18px"> </td>
+							<td class="imagem-excluir" id="btn-lixeira"> <a><img src ="./img/excluir.png" width="18px"></a> </td>
 						</tr>
 					</tbody>
 				</table>
 				<button id="importar-pacientes" class="btn btn-outline-primary">Importar paciente</button>
-				<Adicionar id="adicionar-pacientes" class="btn btn-outline-primary">Adicionar paciente</button>
+				<button id="adicionar-pacientes" class="btn btn-outline-primary"> Adicionar paciente</button>
 			</section>
 
 
@@ -188,5 +191,17 @@
 				<script src="js/ocultar-tabela-adicionar.js"></script>
 
 		</main>
+		<footer>
+			<h2 class="footer" id="footer"> Contatos</h2>
+
+			<div class="icons-footer" id="footer">
+			<a href="https://api.whatsapp.com/send?phone=5583996804949&text=Ol%C3%A1,%0AEu%20gostaria%20de%20marcar%20uma%20consulta%20com%20a%20nutricionista%20Karinny%20" id="icons"><img src="./img/telefone.png" width="50px"></a>
+
+			<a href="https://www.linkedin.com/in/karinny-lemos/"><img src="./img/linkedin.png" width="50px" id="icons"> </a>
+
+			<a href="https://www.instagram.com/nutri.karinnylemos/"><img src="./img/instagram.png" width="50px" id="icons"></a>
+		</div>
+		</footer>
+
 	</body>
 </html>
